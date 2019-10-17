@@ -1,0 +1,12 @@
+<% if flash[:error] %> 
+<% flash[:error].each do |error| %> 
+<li><%= error %> </li> 
+<% end %> 
+<% end %>
+
+<%= form_for @blogger do |f| %> 
+<h2>Enter blogger name: <%= f.text_field :name, placeholder: "Name"%> </h2>
+<h2>Enter blogger age: <%= f.text_field :age, placeholder: "Age"%> </h2>
+<p>Enter blogger bio: <%= f.text_field :bio, placeholder: "Bio"%> </p>
+<%= f.submit %> 
+<% end %> 

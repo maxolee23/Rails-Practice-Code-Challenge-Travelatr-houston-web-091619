@@ -1,0 +1,7 @@
+<h2><%= @destination.name %></h2>
+<h4><%= @destination.country %></h4>
+<p>The 5 most recent posts about this destination: <% @posts.each do |post| %>
+   <li><%= link_to post.title, post_path(post)%></li></p>
+    <% end %>
+<p>Average age of all bloggers who have written about this destination: <%= @age %></p>
+
